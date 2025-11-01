@@ -54,7 +54,7 @@ import java.util.Date
 import java.util.Locale
 
 
-
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormsDataDiri(
     modifier: Modifier,
@@ -71,4 +71,9 @@ fun FormsDataDiri(
     var isChecked by remember { mutableStateOf(false) }
     var showDialog by remember { mutableStateOf(false) }
 
-    }
+
+
+    val datePickerState = rememberDatePickerState()
+    var showDatePickerDialog by remember { mutableStateOf(false) }
+
+}
