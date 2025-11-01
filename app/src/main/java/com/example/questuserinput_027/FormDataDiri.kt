@@ -82,4 +82,7 @@ fun FormsDataDiri(
         val format = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         return format.format(date)
     }
+
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
+
 }
