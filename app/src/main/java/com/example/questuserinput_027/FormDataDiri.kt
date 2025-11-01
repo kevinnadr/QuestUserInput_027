@@ -107,4 +107,12 @@ fun FormsDataDiri(
         )
 
     }
-    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp)
+            .padding(top = 140.dp, bottom = 140.dp)
+            .background(
+                color = Color.White.copy(alpha = 0.5f),
+                shape = RoundedCornerShape(size = 30.dp)
+         }
