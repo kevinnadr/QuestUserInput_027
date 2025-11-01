@@ -72,7 +72,6 @@ fun FormsDataDiri(
     var showDialog by remember { mutableStateOf(false) }
 
 
-
     val datePickerState = rememberDatePickerState()
     var showDatePickerDialog by remember { mutableStateOf(false) }
 
@@ -84,5 +83,12 @@ fun FormsDataDiri(
     }
 
     val gender: List<String> = listOf("Laki-laki", "Perempuan")
+
+    Image(
+        modifier = Modifier.fillMaxSize(),
+        painter = painterResource(id = R.drawable.background),
+        contentDescription = null,
+        contentScale = ContentScale.Crop
+    )
 
 }
