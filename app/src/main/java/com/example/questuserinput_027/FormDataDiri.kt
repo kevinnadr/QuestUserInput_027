@@ -72,6 +72,7 @@ fun FormsDataDiri(
     var showDialog by remember { mutableStateOf(false) }
 
 
+
     val datePickerState = rememberDatePickerState()
     var showDatePickerDialog by remember { mutableStateOf(false) }
 
@@ -91,4 +92,19 @@ fun FormsDataDiri(
         contentScale = ContentScale.Crop
     )
 
-}
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            text = "Form Registrasi",
+            style = MaterialTheme.typography.headlineLarge,
+            modifier = Modifier.padding(start = 12.dp, top = 80.dp),
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 34.sp,
+            color = Color.White,
+        )
+
+    }
+    }
