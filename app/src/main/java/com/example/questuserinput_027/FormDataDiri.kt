@@ -76,4 +76,10 @@ fun FormsDataDiri(
     val datePickerState = rememberDatePickerState()
     var showDatePickerDialog by remember { mutableStateOf(false) }
 
+
+    fun Long.toFormattedDate(): String {
+        val date = Date(this)
+        val format = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        return format.format(date)
+    }
 }
