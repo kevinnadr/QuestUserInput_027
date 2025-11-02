@@ -242,4 +242,55 @@ fun FormsDataDiri(
                     }
                 }
             }
-}
+
+
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(20.dp)
+            ) {
+
+                Row(
+                    modifier = Modifier
+                        .padding(bottom = 1.dp)
+                        .selectable(
+                            selected = isChecked,
+                            onClick = { isChecked = !isChecked },
+                            role = Role.Checkbox
+                        ),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Checkbox(
+                        checked = isChecked,
+                        onCheckedChange = { isChecked = it }
+                    )
+                    Spacer(Modifier.width(4.dp))
+                    Text(
+                        text = "Saya setuju dengan syarat dan ketentuan yang berlaku",
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                }
+
+                val isDataValid = textNama.isNotBlank() &&
+                        textKotaAsal.isNotBlank() &&
+                        textTglLahir.isNotBlank() &&
+                        textRT.isNotBlank() &&
+                        textRW.isNotBlank() &&
+                        textUmur.isNotBlank() &&
+                        textJK.isNotBlank() &&
+                        isChecked
+
+                Button(
+                    modifier = Modifier
+                        .fillMaxWidth(1f)
+                        .padding( start = 80.dp, end = 80.dp)
+                        .height(height = 50.dp),
+                    enabled = isDataValid,
+                    onClick = {
+                        showDialog = true
+                    }
+
+                ) {
+                    Text(text = "Submit")
+                }
+            }
+        }
