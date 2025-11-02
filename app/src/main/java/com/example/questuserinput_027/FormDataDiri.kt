@@ -185,4 +185,14 @@ fun FormsDataDiri(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     shape = RoundedCornerShape(12.dp)
                 )
-               }
+                OutlinedTextField(
+                    value = textRW,
+                    onValueChange = { textRW = it },
+                    label = { Text("RW") },
+                    modifier = Modifier.weight(1f),
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    shape = RoundedCornerShape(12.dp)
+                )
+            }
+}
