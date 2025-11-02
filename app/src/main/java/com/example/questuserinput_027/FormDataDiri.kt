@@ -195,4 +195,14 @@ fun FormsDataDiri(
                     shape = RoundedCornerShape(12.dp)
                 )
             }
-}
+
+            OutlinedTextField(
+                value = textUmur,
+                onValueChange = { textUmur = it },
+                label = { Text("Umur") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                shape = RoundedCornerShape(12.dp)
+            )
+           }
