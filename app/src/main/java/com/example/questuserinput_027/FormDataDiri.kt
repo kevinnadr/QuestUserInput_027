@@ -137,4 +137,14 @@ fun FormsDataDiri(
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp)
             )
+
+
+            OutlinedTextField(
+                value = textKotaAsal,
+                onValueChange = { textKotaAsal = it },
+                label = { Text("Kota Asal") },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp)
+            )
 }
