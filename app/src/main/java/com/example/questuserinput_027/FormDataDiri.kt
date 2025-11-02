@@ -127,4 +127,14 @@ fun FormsDataDiri(
                 .padding(horizontal = 18.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(20.dp)
-        ) }
+        ) {
+
+            OutlinedTextField(
+                value = textNama,
+                onValueChange = { textNama = it },
+                label = { Text("Nama Lengkap") },
+                modifier = Modifier.width(width = 350.dp),
+                singleLine = true,
+                shape = RoundedCornerShape(12.dp)
+            )
+}
