@@ -294,3 +294,44 @@ fun FormsDataDiri(
                 }
             }
         }
+
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = { Text(text = "Data Pendaftaran Berhasil") },
+                text = {
+                    Column {
+                        Text(text = "Nama: $textNama")
+                        Text(text = "Asal Kota: $textKotaAsal")
+                        Text(text = "Tanggal Lahir: $textTglLahir")
+                        Text(text = "Alamat: RT $textRT / RW $textRW")
+                        Text(text = "Umur: $textUmur")
+                        Text(text = "Jenis Kelamin: $textJK")
+                    }
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            showDialog = false
+
+                            textNama = ""
+                            textKotaAsal = ""
+                            textTglLahir = ""
+                            textRT = ""
+                            textRW = ""
+                            textUmur = ""
+                            textJK = ""
+                            isChecked = false
+                        },
+
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary // Warna primer
+                        )
+                    ) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+
+   }
