@@ -324,7 +324,7 @@ fun FormsDataDiri(
                         },
 
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.primary // Warna primer
+                            containerColor = Color.Black.copy(alpha = 0.5f)
                         )
                     ) {
                         Text("OK")
@@ -346,7 +346,7 @@ fun FormsDataDiri(
                         },
 
                         colors = ButtonDefaults.textButtonColors(
-                            contentColor = MaterialTheme.colorScheme.primary // Warna primer
+                            containerColor = Color.White.copy(alpha = 0f)
                         )
                     ) {
                         Text("OK")
@@ -359,7 +359,7 @@ fun FormsDataDiri(
                         },
 
                         colors = ButtonDefaults.textButtonColors(
-                            contentColor = MaterialTheme.colorScheme.onSurfaceVariant // Warna netral
+                            containerColor = Color.White.copy(alpha = 0f)
                         )
                     ) {
                         Text("Batal")
