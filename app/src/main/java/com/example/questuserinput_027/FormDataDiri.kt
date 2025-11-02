@@ -313,7 +313,6 @@ fun FormsDataDiri(
                     Button(
                         onClick = {
                             showDialog = false
-
                             textNama = ""
                             textKotaAsal = ""
                             textTglLahir = ""
@@ -334,4 +333,41 @@ fun FormsDataDiri(
             )
         }
 
-   }
+        if (showDatePickerDialog) {
+            DatePickerDialog(
+                onDismissRequest = { showDatePickerDialog = false },
+                confirmButton = {
+                    TextButton(
+                        onClick = {
+                            datePickerState.selectedDateMillis?.let {
+                                textTglLahir = it.toFormattedDate()
+                            }
+                            showDatePickerDialog = false
+                        },
+
+                        colors = ButtonDefaults.textButtonColors(
+                            contentColor = MaterialTheme.colorScheme.primary // Warna primer
+                        )
+                    ) {
+                        Text("OK")
+                    }
+                },
+                dismissButton = {
+                    TextButton(
+                        onClick = {
+                            showDatePickerDialog = false
+                        },
+
+                        colors = ButtonDefaults.textButtonColors(
+                            contentColor = MaterialTheme.colorScheme.onSurfaceVariant // Warna netral
+                        )
+                    ) {
+                        Text("Batal")
+                    }
+                }
+            ) {
+                DatePicker(state = datePickerState)
+            }
+        }
+    }
+}
