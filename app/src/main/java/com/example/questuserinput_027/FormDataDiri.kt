@@ -147,4 +147,9 @@ fun FormsDataDiri(
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp)
             )
-}
+
+            // Baris untuk Tanggal Lahir, RT, dan RW
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            )
