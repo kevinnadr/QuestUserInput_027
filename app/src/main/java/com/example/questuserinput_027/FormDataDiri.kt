@@ -175,4 +175,14 @@ fun FormsDataDiri(
                         )
                     }
                 )
-}
+
+                OutlinedTextField(
+                    value = textRT,
+                    onValueChange = { textRT = it },
+                    label = { Text("RT") },
+                    modifier = Modifier.weight(1f),
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    shape = RoundedCornerShape(12.dp)
+                )
+               }
