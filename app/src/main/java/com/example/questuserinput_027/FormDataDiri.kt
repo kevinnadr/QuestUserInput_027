@@ -152,4 +152,27 @@ fun FormsDataDiri(
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
-            )
+            ) {
+                val interactionSource = remember { MutableInteractionSource() }
+                if (interactionSource.collectIsPressedAsState().value) {
+                    showDatePickerDialog = true
+                }
+
+
+                OutlinedTextField(
+                    value = textTglLahir,
+                    onValueChange = { },
+                    label = { Text("Tanggal Lahir") },
+                    modifier = Modifier.weight(1.6f),
+                    singleLine = true,
+                    readOnly = true,
+                    interactionSource = interactionSource,
+                    shape = RoundedCornerShape(12.dp),
+                    trailingIcon = {
+                        Icon(
+                            imageVector = Icons.Default.DateRange,
+                            contentDescription = "Pilih Tanggal"
+                        )
+                    }
+                )
+}
