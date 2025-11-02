@@ -115,4 +115,16 @@ fun FormsDataDiri(
             .background(
                 color = Color.White.copy(alpha = 0.5f),
                 shape = RoundedCornerShape(size = 30.dp)
-         }
+            )
+
+
+
+    )
+    {
+        Column(
+            modifier = Modifier
+                .padding(top = 30.dp)
+                .padding(horizontal = 18.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(20.dp)
+        ) }
