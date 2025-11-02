@@ -205,4 +205,41 @@ fun FormsDataDiri(
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 shape = RoundedCornerShape(12.dp)
             )
-           }
+
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Text(
+                    text = "Jenis Kelamin",
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Start
+                )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    gender.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item },
+                                    role = Role.RadioButton
+                                )
+                                .padding(end = 16.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            )
+                            Spacer(Modifier.width(4.dp))
+                            Text(text = item)
+                        }
+                    }
+                }
+            }
+}
